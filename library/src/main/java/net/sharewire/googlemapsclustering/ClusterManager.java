@@ -43,6 +43,13 @@ public class ClusterManager<T extends ClusterItem> implements GoogleMap.OnCamera
 
     private int mMinClusterSize = DEFAULT_MIN_CLUSTER_SIZE;
 
+    public void setAnimationEnabled(boolean enabled){
+        if(mRenderer == null){
+            return;
+        }
+        mRenderer.setAnimationEnabled(enabled);
+    }
+
     /**
      * Defines signatures for methods that are called when a cluster or a cluster item is clicked.
      *
