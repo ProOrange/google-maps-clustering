@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.compileSdkVersion
-    buildToolsVersion rootProject.buildToolsVersion
 
     defaultConfig {
         applicationId "net.sharewire.googlemapsclustering.sample"
@@ -23,11 +22,12 @@ android {
         // The application doesn't have to be indexable by Google Search.
         disable 'GoogleAppIndexingWarning'
     }
+    buildToolsVersion rootProject.buildToolsVersion
 }
 
 dependencies {
     implementation project(':library')
     implementation "com.android.support:support-v4:$supportVersion"
-    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation "com.android.support:support-annotations:$supportVersion"
     implementation "com.google.android.gms:play-services-maps:$playServicesVersion"
 }
